@@ -192,10 +192,12 @@ updating name "First Book" to "First Book changed!!"
 ## Try to delete same Thing again
 
 ### Response
+```json
 
 {
   "status_code": 404,
   "status": "error",
   "message": "Book with ID 65a40a622a4c28c90b9b17d2 not found"
 }
+```
 
