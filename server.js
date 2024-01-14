@@ -25,7 +25,7 @@ app.use("/api", route);
 
 //health check for backend
 app.get("/",(req,res)=>{
-  res.send("Backend is Live")
+  res.send("Backend is Live 👨‍💻 ✔")
 } );
 
 app.listen(port, () => {
