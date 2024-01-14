@@ -9,13 +9,39 @@
 
     npm start
 
-## Run the tests
 
-    ./run-tests.sh
+## Fetching Data from Ice and Fire API 
 
-# REST API
+### Request
+
+`GET http://localhost:8080/api/external-books?name=nameOfABook`
+
+
+### Response
+```json
+
+{
+  "status_code": 200,
+  "status": "success",
+  "data": {
+    "name": "A Game of Thrones",
+    "isbn": "978-0553103540",
+    "authors": [
+      "George R. R. Martin"
+    ],
+    "number_of_pages": 694,
+    "publisher": "Bantam Books",
+    "country": "United States",
+    "release_date": "1996-08-01T00:00:00"
+  }
+}
+
+```
+
+# REST API CRUD ops
 
 The REST APIs are described below.
+
 
 ## Create an entry in the database with provided payload.
 
@@ -230,4 +256,6 @@ updating name "First Book" to "First Book changed!!"
   "message": "Book with ID 65a40a622a4c28c90b9b17d2 not found"
 }
 ```
+
+
 

@@ -23,6 +23,11 @@ connectToMongoDB(mongoURI);
 app.use(express.json());
 app.use("/api", route);
 
+//health check for backend
+app.get("/",(req,res)=>{
+  res.send("Backend is Live")
+} );
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
