@@ -25,6 +25,8 @@ The REST APIs are described below.
 
 payload :
 
+```json
+
 {
       "name":"First Book",
       "isbn":"123456789",
@@ -35,7 +37,11 @@ payload :
       "release_date":"2024-01-01"
 }
 
+```
+
 ### Response
+
+```json
 
 {
   "status_code": 201,
@@ -59,6 +65,8 @@ payload :
   ]
 }
 
+```
+
 ## Read all the entries in database.
 
 ### Request
@@ -67,6 +75,8 @@ payload :
 
 
 ### Response
+
+```json
 
    {
   "status_code": 200,
@@ -88,6 +98,9 @@ payload :
   ]
 } 
 
+
+```
+
 ## Get a specific document using id
 
 ### Request
@@ -96,6 +109,8 @@ payload :
 
 
 ### Response
+
+```json
 
 {
   "status_code": 200,
@@ -115,6 +130,9 @@ payload :
   }
 }
 
+
+```
+
 ## Get a non-existent document
 
 ### Request
@@ -124,11 +142,15 @@ payload :
 
 ### Response
 
+```json
+
 {
   "status_code": 404,
   "status": "error",
   "message": "Book with ID 65a40a622a4c28c90b9b17d2 not found"
 }
+
+```
 
 
 ## Update a document with specific id
@@ -140,6 +162,8 @@ payload :
 updating name "First Book" to "First Book changed!!"
 
 ### Response
+
+```json
 
 {
   "status_code": 200,
@@ -160,6 +184,8 @@ updating name "First Book" to "First Book changed!!"
   }
 }
 
+```
+
 
 ## Delete a entry with specific id
 
@@ -169,6 +195,8 @@ updating name "First Book" to "First Book changed!!"
 
 
 ### Response
+
+```json
 
 {
   "status_code": 200,
@@ -188,6 +216,8 @@ updating name "First Book" to "First Book changed!!"
     "__v": 0
   }
 }
+
+```
 
 ## Try to delete same Thing again
 
