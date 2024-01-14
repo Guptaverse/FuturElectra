@@ -1,3 +1,13 @@
+# FuturElectra Assignment
+
+Backend Deployed at Render
+[https://backend-futurelectra.onrender.com](https://backend-futurelectra.onrender.com)
+
+# Tech Stack
+
+- **(Backend)**: Node,Express,MongoDB
+
+
 # Firstly Run these command to get start with
 
 
