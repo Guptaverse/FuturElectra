@@ -76,6 +76,7 @@ async function handleReadBooks(req, res) {
 async function handleUpdateBook(req, res){
     try {
         const bookId = req.params.id;
+        console.log(bookId)
         const {
           name,
           isbn,
@@ -87,7 +88,7 @@ async function handleUpdateBook(req, res){
         } = req.body;
     
         // Find the book by ID and update it
-        const updatedBook = await Book.findOneAndUpdate(
+        const updatedBook = await db.findOneAndUpdate(
           { _id: bookId },
           {
             name,
@@ -129,7 +130,7 @@ async function handleDeleteBook(req, res){
         const bookId = req.params.id;
     
         // Finding the book by ID and delete it
-        const deletedBook = await Book.findByIdAndDelete(bookId);
+        const deletedBook = await db.findByIdAndDelete(bookId);
     
         // If the book not found
         if (!deletedBook) {
@@ -159,7 +160,7 @@ async function handleShowBook(req, res){
         const bookId = req.params.id;
     
         // Finding the book by ID
-        const foundBook = await Book.findById(bookId);
+        const foundBook = await db.findById(bookId);
     
         // If the book not found
         if (!foundBook) {

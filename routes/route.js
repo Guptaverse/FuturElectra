@@ -26,8 +26,6 @@ router.delete("/v1/books/:id", handleDeleteBook);
 router.get("/v1/books/:id", handleShowBook);
 
 // For Fetching external books From ICE and FIRE API
-router.get("/external-books",handleExternalBooks,()=>{
-  console.log("hello")
-})
+router.get("/external-books",handleExternalBooks)
 
 module.exports = router;
